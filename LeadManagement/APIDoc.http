@@ -1,0 +1,102 @@
+# api call for lead create
+###
+POST http://127.0.0.1:8000/lead
+Content-Type: application/json
+Authorization: Basic admin:Safiya66
+
+{
+    "name":"akhil",
+    "phone":9098984589,
+    "email":"akhil@gmail.com",
+    "course":"Python Fullstack",
+    "source":"Website",
+    "status":"Contacted",
+    "notes":"Evening batch preferred"
+
+}
+
+# API call for list all leads
+###
+GET http://127.0.0.1:8000/lead
+Authorization: Basic admin:Safiya66
+
+
+# API call for lead detail view
+###
+GET http://127.0.0.1:8000/lead/detail/1
+Authorization: Basic admin:Safiya66
+
+
+# API call for update a lead data
+###
+PUT http://127.0.0.1:8000/lead/detail/1
+Content-Type: application/json
+Authorization: Basic admin:Safiya66
+
+{
+  "id": 1,
+  "name": "Anu",
+  "phone": "9098989898",
+  "email": "anu@gmail.com",
+  "course": "Python Fullstack",
+  "source": "Website",
+  "status": "Contacted",
+  "added_date": "2026-10-20T13:00:44.355900Z",
+  "notes": "Evening batch preferred"
+}
+
+# API call for lead detail view
+###
+DELETE  http://127.0.0.1:8000/lead/detail/1
+Authorization: Basic admin:Safiya66
+
+
+
+# API call for status level lead list
+###
+GET http://127.0.0.1:8000/lead/status
+Authorization: Basic admin:Safiya66
+
+
+
+# API call for ordering leads based on name
+###
+GET http://127.0.0.1:8000/lead?ordering=name
+Authorization: Basic admin:Safiya66
+
+
+# API call for ordering leads based on added date in ascending order
+###
+GET http://127.0.0.1:8000/lead?ordering=added_date 
+Authorization: Basic admin:Safiya66
+
+
+# API call for ordering leads based on added date in descending 
+###
+GET http://127.0.0.1:8000/lead?ordering=-added_date
+Authorization: Basic admin:Safiya66
+
+
+# API call for filter leads based on status
+###
+GET http://127.0.0.1:8000/lead?search=Contacted
+Authorization: Basic admin:Safiya66
+
+
+# API call for filter leads based on status
+###
+GET http://127.0.0.1:8000/lead?search=Referral New
+Authorization: Basic admin:Safiya66
+
+
+# API call for filter leads based on status
+###
+GET http://127.0.0.1:8000/lead?status=Contacted&source=Referral
+Authorization: Basic admin:Safiya66
+
+
+
+
+
+
+
